@@ -1,9 +1,11 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace TrainingLog.Models
 {
     public class BaseModel : IBaseModel
     {
+        [Key]
         public int Id { get; }
 
         private DateTime dateAdded;
