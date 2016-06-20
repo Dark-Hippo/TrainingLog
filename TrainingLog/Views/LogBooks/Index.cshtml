@@ -1,0 +1,36 @@
+﻿@using TrainingLog.ViewModels
+@model LogBooksViewModel
+
+@{
+    ViewBag.Title = "Log books";
+}
+
+<div class="jumbotron">
+    <h1>@ViewBag.Title</h1>
+</div>
+
+<div class="row">
+    <div class="col-sm-6">
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>From</th>
+                    <th>To</th>
+                    <th>Last updated</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.LogBooks)
+                {
+                    <tr>
+                        <td>@item.Name</td>
+                        <td>@item.StartDate</td>
+                        <td>@item.EndDate</td>
+                        <td>@item.LastUpdated</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
