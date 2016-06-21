@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using TrainingLog.Models;
 using TrainingLog.ViewModels;
 
 namespace TrainingLog.Controllers
 {
     public class LogBooksController : Controller
     {
+        Context Db = new Context();
+
         // GET: LogBooks
         public ActionResult Index()
         {
@@ -18,7 +21,24 @@ namespace TrainingLog.Controllers
 
         public ActionResult Create()
         {
-            return View(new LogBooksViewModel());
+            return View(new LogBookViewModel());
+        }
+
+        [HttpPost]
+        public ActionResult Create(LogBookViewModel vm)
+        {
+            var logBook = new LogBook()
+            {
+                Name = vm.Name,
+                StartDate = vm.StartDate,
+                DateAdded = DateTime.Now,
+                LastUpdated = DateTime.Now
+            };
+
+            Db.LogBooks.Add(logBook);
+            Db.SaveChanges();
+
+            return RedirectToAction("Index", "Home");
         }
     }
 }

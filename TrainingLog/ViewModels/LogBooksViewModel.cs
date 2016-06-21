@@ -9,6 +9,10 @@ namespace TrainingLog.ViewModels
 {
     public class LogBooksViewModel
     {
+        public LogBooksViewModel()
+        {
+            LogBooks = new List<LogBook>();
+        }
         public ICollection<LogBook> LogBooks { get; set; }
     }
 }
