@@ -9,7 +9,7 @@ namespace TrainingLog.Controllers
 {
     public class LogsController : Controller
     {
-        Context db = new Context();
+        TrainingLogContext db = new TrainingLogContext();
 
         // GET: Logs
         public ActionResult Index()

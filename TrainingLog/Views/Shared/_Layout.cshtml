@@ -6,6 +6,7 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    <link type="text/css" href="https://code.jquery.com/ui/1.11.4/themes/vader/jquery-ui.css" rel="stylesheet" />
 
 </head>
 <body>
@@ -41,5 +42,12 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js" integrity="sha256-xNjb53/rY+WmG+4L6tTl9m6PpqknWZvRt0rO1SRnJzw=" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        $(function () {
+            $('.datepicker').datepicker({});
+        });
+    </script>
 </body>
 </html>

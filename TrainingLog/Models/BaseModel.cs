@@ -6,7 +6,7 @@ namespace TrainingLog.Models
     public class BaseModel : IBaseModel
     {
         [Key]
-        public int Id { get; }
+        public int Id { get; set; }
 
         private DateTime dateAdded;
         public DateTime DateAdded { get { return dateAdded; } set { dateAdded = DateTime.UtcNow; } }

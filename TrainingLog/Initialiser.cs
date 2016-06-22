@@ -8,9 +8,9 @@ using TrainingLog.Models;
 
 namespace TrainingLog
 {
-    class Initialiser : System.Data.Entity.DropCreateDatabaseIfModelChanges<Context>
+    class Initialiser : System.Data.Entity.DropCreateDatabaseIfModelChanges<TrainingLogContext>
     {
-        protected override void Seed(Context context)
+        protected override void Seed(TrainingLogContext context)
         {
             context.ExerciseTypes.AddOrUpdate(m => m.Id,
                 new ExerciseType { Name = "Squat" },

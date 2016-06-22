@@ -205,6 +205,15 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Initialiser.cs" />
+    <Compile Include="Migrations\201606221858302_initial.cs" />
+    <Compile Include="Migrations\201606221858302_initial.Designer.cs">
+      <DependentUpon>201606221858302_initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201606221926000_logbooknullabledates.cs" />
+    <Compile Include="Migrations\201606221926000_logbooknullabledates.Designer.cs">
+      <DependentUpon>201606221926000_logbooknullabledates.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\BaseModel.cs" />
     <Compile Include="Models\Exercise.cs" />
@@ -292,6 +301,14 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201606221858302_initial.resx">
+      <DependentUpon>201606221858302_initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201606221926000_logbooknullabledates.resx">
+      <DependentUpon>201606221926000_logbooknullabledates.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

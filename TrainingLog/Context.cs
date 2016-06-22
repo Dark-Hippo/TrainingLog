@@ -7,7 +7,7 @@ using TrainingLog.Models;
 
 namespace TrainingLog
 {
-    public class Context : DbContext
+    public class TrainingLogContext : DbContext
     {
         public DbSet<LogBook> LogBooks { get; set; }
         public DbSet<Log> Logs { get; set; }

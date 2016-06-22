@@ -10,7 +10,7 @@ namespace TrainingLog.Controllers
 {
     public class LogBooksController : Controller
     {
-        Context Db = new Context();
+        TrainingLogContext Db = new TrainingLogContext();
 
         // GET: LogBooks
         public ActionResult Index()
@@ -33,6 +33,7 @@ namespace TrainingLog.Controllers
                 StartDate = vm.StartDate,
                 DateAdded = DateTime.Now,
                 LastUpdated = DateTime.Now
+                
             };
 
             Db.LogBooks.Add(logBook);
