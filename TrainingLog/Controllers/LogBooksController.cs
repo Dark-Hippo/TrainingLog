@@ -16,6 +16,8 @@ namespace TrainingLog.Controllers
         public ActionResult Index()
         {
             var vm = new LogBooksViewModel();
+            vm.LogBooks = Db.LogBooks.ToList();
+
             return View(vm);
         }
 
@@ -40,6 +42,28 @@ namespace TrainingLog.Controllers
             Db.SaveChanges();
 
             return RedirectToAction("Index", "Home");
+        }
+
+        public ActionResult Details(int? id)
+        {
+            var logBookId = id.GetValueOrDefault();
+
+            if (logBookId == 0)
+                return RedirectToAction("Index");
+
+            var logBook = Db.LogBooks.Find(logBookId);
+
+            var vm = new LogBookViewModel
+            {
+                Name = logBook.Name,
+                StartDate = logBook.StartDate,
+                Logs = new List<Log>()
+            };
+
+            if(logBook.Logs != null)
+                vm.Logs.AddRange(logBook.Logs);
+
+            return View(vm);
         }
     }
 }

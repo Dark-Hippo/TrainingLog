@@ -30,7 +30,7 @@
                 @foreach (var item in Model.LogBooks)
                 {
                     <tr>
-                        <td>@item.Name</td>
+                        <td><a href="~/LogBooks/Details/@item.Id">@item.Name</a></td>
                         <td>@item.StartDate</td>
                         <td>@item.EndDate</td>
                         <td>@item.LastUpdated</td>

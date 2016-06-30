@@ -213,6 +213,10 @@
     <Compile Include="Migrations\201606221926000_logbooknullabledates.Designer.cs">
       <DependentUpon>201606221926000_logbooknullabledates.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201606301802217_ModelUpdateLogForeignKey.cs" />
+    <Compile Include="Migrations\201606301802217_ModelUpdateLogForeignKey.Designer.cs">
+      <DependentUpon>201606301802217_ModelUpdateLogForeignKey.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\BaseModel.cs" />
@@ -290,6 +294,7 @@
     <Content Include="Views\Logs\Index.cshtml" />
     <Content Include="Views\LogBooks\Index.cshtml" />
     <Content Include="Views\LogBooks\Create.cshtml" />
+    <Content Include="Views\LogBooks\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -308,6 +313,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201606221926000_logbooknullabledates.resx">
       <DependentUpon>201606221926000_logbooknullabledates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201606301802217_ModelUpdateLogForeignKey.resx">
+      <DependentUpon>201606301802217_ModelUpdateLogForeignKey.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
