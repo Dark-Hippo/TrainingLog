@@ -295,6 +295,8 @@
     <Content Include="Views\LogBooks\Index.cshtml" />
     <Content Include="Views\LogBooks\Create.cshtml" />
     <Content Include="Views\LogBooks\Details.cshtml" />
+    <Content Include="Views\Logs\Create.cshtml" />
+    <Content Include="Views\Logs\EditorTemplates\ExercisesView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

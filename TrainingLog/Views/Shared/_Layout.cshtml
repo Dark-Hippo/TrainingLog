@@ -46,7 +46,10 @@
 
     <script type="text/javascript">
         $(function () {
-            $('.datepicker').datepicker({});
+            $('.datepicker').datepicker({
+                setDate: new Date(),
+                dateFormat: 'dd-mm-yy'
+            });
         });
     </script>
 </body>

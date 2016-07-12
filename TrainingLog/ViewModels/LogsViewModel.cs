@@ -10,6 +10,15 @@ namespace TrainingLog.ViewModels
     public class LogsViewModel
     {
         public DateTime Date { get; set; }
-        public ICollection<Exercise> Exercises { get; set; }
+        public ExercisesView Exercises { get; set; }
+    }
+
+    public class ExercisesView
+    {
+        public ExercisesView()
+        {
+            Exercises = new List<Exercise>();
+        }
+        public IEnumerable<Exercise> Exercises { get; set; }
     }
 }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using TrainingLog.Models;
+using TrainingLog.ViewModels;
 
 namespace TrainingLog.Controllers
 {
@@ -21,7 +22,7 @@ namespace TrainingLog.Controllers
         // GET: Logs/Create
         public ActionResult Create()
         {
-            var log = new Log();
+            var log = new LogsViewModel();
             return View(log);
         }
     }
